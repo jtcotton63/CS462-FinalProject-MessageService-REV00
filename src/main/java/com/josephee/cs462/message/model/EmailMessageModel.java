@@ -1,4 +1,4 @@
-package com.josephee.cs462.job.model;
+package com.josephee.cs462.message.model;
 
 import java.util.ArrayList;
 import java.util.List;

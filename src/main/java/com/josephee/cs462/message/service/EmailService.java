@@ -1,6 +1,6 @@
-package com.josephee.cs462.job.service;
+package com.josephee.cs462.message.service;
 
-import com.josephee.cs462.job.model.EmailMessageModel;
+import com.josephee.cs462.message.model.EmailMessageModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

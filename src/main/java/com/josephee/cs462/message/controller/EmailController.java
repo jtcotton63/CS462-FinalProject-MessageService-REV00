@@ -1,7 +1,7 @@
-package com.josephee.cs462.job.controller;
+package com.josephee.cs462.message.controller;
 
-import com.josephee.cs462.job.model.EmailMessageModel;
-import com.josephee.cs462.job.service.EmailService;
+import com.josephee.cs462.message.model.EmailMessageModel;
+import com.josephee.cs462.message.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
