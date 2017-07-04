@@ -1,26 +1,25 @@
 package com.josephee.cs462.message.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 
 public class EmailMessageModel {
 
-    private List<String> toAddresses;
+    private HashSet<String> toAddresses;
     private String subject;
     private String contents;
 
     public EmailMessageModel() {
     }
 
-    public EmailMessageModel(List<String> toAddresses, String subject, String contents) {
+    public EmailMessageModel(HashSet<String> toAddresses, String subject, String contents) {
         this.toAddresses = toAddresses;
         this.subject = subject;
         this.contents = contents;
     }
 
-    public List<String> getToAddresses() {
+    public HashSet<String> getToAddresses() {
         if(toAddresses == null)
-            toAddresses = new ArrayList<>();
+            toAddresses = new HashSet<>();
 
         return toAddresses;
     }
@@ -32,7 +31,7 @@ public class EmailMessageModel {
         return toAddresses.add(toAddress);
     }
 
-    public void setToAddresses(List<String> toAddresses) {
+    public void setToAddresses(HashSet<String> toAddresses) {
         this.toAddresses = toAddresses;
     }
 

@@ -15,6 +15,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
 @Service("emailService")
@@ -27,7 +28,7 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    public void create(EmailMessageModel incoming) throws MessagingException {
+    public void sendEmail(EmailMessageModel incoming) throws MessagingException {
         if(incoming.getContents() == null || incoming.getContents().isEmpty())
             return;
 
@@ -36,7 +37,7 @@ public class EmailService {
             sendSingle(internetAddress, incoming);
     }
 
-    private List<InternetAddress> getInternetAddressList(List<String> toAddresses) throws AddressException {
+    private List<InternetAddress> getInternetAddressList(HashSet<String> toAddresses) throws AddressException {
         List<InternetAddress> internetAddresses = new ArrayList<>(toAddresses.size());
         for(String address: toAddresses) {
             InternetAddress[] internetAddress = InternetAddress.parse(address);

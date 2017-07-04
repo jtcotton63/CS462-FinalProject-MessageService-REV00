@@ -19,6 +19,6 @@ public class EmailController {
 
     @RequestMapping(value = "", method = RequestMethod.POST)
     public void sendMail(@RequestBody EmailMessageModel model) throws MessagingException {
-        emailService.create(model);
+        emailService.sendEmail(model);
     }
 }
